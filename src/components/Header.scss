@@ -1,0 +1,43 @@
+$hover-color: #e29256;
+$header-bg: #293035;
+$menu-color: #a9a9a9;
+
+header {
+    position: relative;
+    background-color: $header-bg;
+    box-shadow: 0 3px 7px black;
+    border-bottom: 1px solid black;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    nav{
+        margin-left: 50%;
+        ul{
+            li{
+                margin-left: 47px;
+                display: inline-block;
+                a{
+                    font-family: 'Lavanderia';
+                    font-size: 29px;
+                    color: $menu-color;
+                    text-decoration: none;
+                    transition: .3s;
+                    &:hover{
+                        color: $hover-color;
+                    }
+                }
+            }
+        }
+    }
+    button{
+        margin-left: auto;
+        margin-right: 30px;
+        color: $menu-color;
+        font-size: 25px;
+        transition: .3s;
+        &:hover{
+            color: $hover-color;
+        }
+    }
+}

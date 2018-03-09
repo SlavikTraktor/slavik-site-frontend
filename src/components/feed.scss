@@ -1,0 +1,11 @@
+@mixin media-max($width) {
+    @media only screen and (max-width: $width) { @content; }
+}
+
+section.main{
+    background-repeat: no-repeat;
+    background-size: contain;
+    img{
+        width: 100%;
+    }
+}

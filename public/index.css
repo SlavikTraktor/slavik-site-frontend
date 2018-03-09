@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Lavanderia';
+    src: url('/fonts/Lavanderia Regular.otf');
+}
+
+@font-face {
+    font-family: 'Monotype Corsiva';
+    src: url('/fonts/Monotype Corsiva.ttf');
+}
+
+@font-face {
+    font-family: 'Candara';
+    src: url('/fonts/Candara.ttf');
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*html{
+    overflow:  hidden;
+}*/
+html, body, #root {
+    height: 100%;
+}
+body{
+    background-color: #293035;
+}
+
+.button-wo-els {
+    border: none;
+    font-family: 'Monotype Corsiva';
+    outline: none;
+    cursor: pointer;
+    background: none;
+}
