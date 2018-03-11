@@ -2,8 +2,8 @@ import React from 'react'
 import {connect} from "react-redux"
 import Img from 'react-image'
 
-import Modal from '../containers/Modal/Modal.jsx'
 import BigPicture from './BigPicture/BigPicture.jsx'
+import ChangeImageMeta from './ChangeImageMeta/ChangeImageMeta.jsx'
 
 import * as imgActions from "../actions/imagesActions"
 
@@ -38,15 +38,12 @@ class MiniImage extends React.Component {
                 <Img
                     src={apiPrefix + "/images/min/" + this.props.img}
                     alt={this.props.img}
-                    onClick={this.toggleBigImageModal}/> 
-                    {this.props.token !== null && <div className="del_picture">
-                        <button className="button-wo-els" onClick={this.toggleChangeModal}>Change</button>
-                        <span onClick={this.handleDelete}>X</span>
-                    </div>}
+                    onClick={this.toggleBigImageModal}/> {this.props.token !== null && <div className="del_picture">
+                    <button className="button-wo-els" onClick={this.toggleChangeModal}>Change</button>
+                    <span onClick={this.handleDelete}>X</span>
+                </div>}
                 {this.state.isBigImageModalOpen && <BigPicture img={this.props.img} onClose={this.toggleBigImageModal}/>}
-                {this.state.isChangeModalOpen && <Modal onClose={this.toggleChangeModal}>
-                    
-                </Modal>}
+                {this.state.isChangeModalOpen && <ChangeImageMeta img={this.props.img} onClose={this.toggleChangeModal}/>}
             </li>
         )
     }

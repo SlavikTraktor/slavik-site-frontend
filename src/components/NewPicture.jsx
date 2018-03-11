@@ -22,10 +22,6 @@ class NewPicture extends React.Component {
         this
             .props
             .addImageFunc(this.refs.file.files[0], this.refs.header.value, this.refs.description.value, this.props.token)
-
-        /*this
-            .props
-            .setMetaFunc(this.refs.file.files[0].name, this.refs.header.value, this.refs.description.value, this.props.token)*/
     }
 
     render() {
@@ -51,9 +47,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        addImageFunc: (img, header, desc, token) => dispatch(imgActions.addImageAction(img, header, desc, token)),
-        setMetaFunc: (img, header, desc, token) => dispatch(imgActions.setMetaImageAction(img, header, desc, token))
-
+        addImageFunc: (img, header, desc, token) => dispatch(imgActions.addImageAction(img, header, desc, token))
     }
 }
 

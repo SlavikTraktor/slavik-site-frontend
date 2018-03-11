@@ -35,7 +35,7 @@ class Pictures extends Component {
                     options={{
                     horizontalOrder: true,
                     columnWidth: 190,
-                    transitionDuration: 0
+                    transitionDuration: '0.3s'
                 }}>
                     {this
                         .props
