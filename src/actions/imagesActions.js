@@ -52,3 +52,15 @@ export function setMetaImageAction(img, header, desc, token) {
       .then(dispatch({type: "SET_META"}))
   }
 }
+
+export function getMetaImageAction(img){
+  return (dispatch) => {
+    api.getMetaImage(img)
+      .then(res => ({header: res.data.header, desc: res.data.desc}))
+      .then(data => dispatch({type: "GET_META_IMAGE", payload: data}))
+  }
+}
+
+export function clearDescAction(){
+  return dispatch => dispatch({type: "CLEAR_META_IMAGE"})
+}

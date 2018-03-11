@@ -24,15 +24,27 @@ export default function images(state = initialState, action) {
         case "DELETE_IMAGE":
             state
                 .list
-                .splice(state.list.indexOf(action.payload), 1)
+                .splice(state.list.indexOf(action.payload), 1);
             return {
-                    ...state,
-                    list: [...state.list]
-                }
+                ...state,
+                list: [...state.list]
+            }
         case "CLEAR_IMAGES_LIST":
             return {
                 ...state,
                 list: [],
+                header: "",
+                desc: ""
+            }
+        case "GET_META_IMAGE":
+            return {
+                ...state,
+                header: action.payload.header,
+                desc: action.payload.desc
+            }
+        case "CLEAR_META_IMAGE":
+            return {
+                ...state,
                 header: "",
                 desc: ""
             }

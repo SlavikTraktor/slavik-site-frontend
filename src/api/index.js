@@ -7,7 +7,7 @@ export default {
         return axios.get(`${apiPrefix}/images`)
     },
     getImage(id) {
-        return axios.get(`${apiPrefix}/images/${id}`)
+        return axios.get(`${apiPrefix}/images/img/${id}`)
     },
     createImage(data, token) {
         return axios.post(`${apiPrefix}/images/create/${token}`, data)
@@ -16,7 +16,7 @@ export default {
         return axios.post(`${apiPrefix}/images/meta/`, data)
     },
     getMetaImage(data){
-        return axios.get(`${apiPrefix}/images/meta/`, data)
+        return axios.get(`${apiPrefix}/images/meta?image=${data}`)
     },
     deleteImage(data){
         return axios.post(`${apiPrefix}/images/delete`, data)
