@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Img from 'react-image'
 
 import './feed.scss'
 
@@ -7,22 +8,12 @@ export default class Feed extends Component {
         return (
                 <div>
                     <section className="main">
-                        <img src="/img/main-image.png" alt=""/>
+                        <Img src="/img/main-image.png" alt="" decode={false}/>
                     </section>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    kek
+                    <article className="main-article">
+                        <h1>Who am I?</h1>
+                        <p>My name is Slava. Im web developer.<br/> This is my first project</p>
+                    </article>
                 </div>
         )
     }

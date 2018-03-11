@@ -1,9 +1,12 @@
 import React from 'react'
 import {Switch, Route} from 'react-router-dom'
 
-import Feed from "./feed.jsx"
+import MakeLoadable from "../containers/Loading/Loading.jsx"
+
+const Feed = MakeLoadable(import("./feed.jsx"))
+const Pictures = MakeLoadable(import("./pictures.jsx"))
+
 import About from "./about.jsx"
-import Pictures from "./pictures.jsx"
 import AdminForm from "./admin/LoginForm"
 import RouteAdmin from "./admin/RouteAdmin"
 import Reviews from "./Reviews.jsx"
